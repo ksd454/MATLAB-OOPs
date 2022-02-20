@@ -17,7 +17,7 @@ classdef BankAccount < handle
             BA.AccountNumber = accNum;
             BA.AccountBalance = initBal;
             BA.AccountListener = AccountManager.addAccount(BA);
-            
+        end       
             function deposit(BA,amt)
                 BA.AccountBalance = BA.AccountBalance + amt;
                 if BA.AccountBalance > 0
@@ -44,7 +44,7 @@ classdef BankAccount < handle
                 disp('-------------------------')
             end
         end
-    end
+   
     methods(Static)
         function obj = loadobj(s)
             if isstruct(s)
